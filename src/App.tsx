@@ -7,6 +7,7 @@ import Page404 from './components/Pages/Page404/Page404';
 import Header from './components/Header/Header';
 import CurrenciesPage from './components/Pages/Currencies/CurrenciesPage';
 import SingleCurrencyRate from './components/Pages/SingleCurrency/SingleCurrencyRate';
+import ConvertedCurrency from './components/Pages/ConvertedCurrency/ConvertedCurrency';
 
 const App = () => (
   <BrowserRouter>
@@ -15,7 +16,8 @@ const App = () => (
       <Route path="/" element={<Navigate to="/currencies.json" />} />
       <Route path="/currencies.json" element={<CurrenciesPage />} />
       <Route path="*" element={<Page404 />} />
-      <Route path="/currencies/:name.json" element={<SingleCurrencyRate />} />
+      <Route path="/currencies/:nameId.json" element={<SingleCurrencyRate />} />
+      <Route path="/currencies/converter" element={<ConvertedCurrency />} />
     </Routes>
   </BrowserRouter>
 );

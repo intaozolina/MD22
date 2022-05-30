@@ -1,0 +1,13 @@
+.converter__wrapper {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 20px;
+  padding: 30px;
+  justify-content: center;
+}
+.converter__select {
+  width: 100%;
+  height: 50px;
+  cursor: pointer;
+  font-size: 24px;
+}

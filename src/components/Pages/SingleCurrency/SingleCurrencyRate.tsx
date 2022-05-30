@@ -4,12 +4,10 @@ import { useGetCurrencyByNameQuery } from '../../Slices/CurrencySlice';
 import './singleCurrency.scss';
 
 const SingleCurrencyRate = () => {
-  const { name } = useParams();
+  const { nameId } = useParams();
 
   // @ts-ignore
-  const {
-    data: currency, isLoading, isFetching, error,
-  } = useGetCurrencyByNameQuery(name);
+  const { data: currency, isLoading, isFetching, error } = useGetCurrencyByNameQuery(nameId);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -20,12 +18,12 @@ const SingleCurrencyRate = () => {
   }
 
   // @ts-ignore
-  const currencyRate = Object.entries(currency[name]);
+  const currencyRate = Object.entries(currency[nameId]);
   // @ts-ignore
   return (
     <div>
       <h1 className="currency-heading">
-        {name}
+        {nameId}
         {' '}
         rate to other currencies
       </h1>
