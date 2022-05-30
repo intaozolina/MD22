@@ -1,21 +1,21 @@
 import React from 'react';
 import {
-  BrowserRouter, Routes, Route, Navigate,
+  Routes, Route, Navigate, BrowserRouter,
 } from 'react-router-dom';
 import './App.scss';
-import PokemonHomePage from './components/Pages/PokemonHomePage/PokemonHomePage';
-import SinglePokemonPage from './components/Pages/SinglePokemonPage/SinglePokemonPage';
 import Page404 from './components/Pages/Page404/Page404';
 import Header from './components/Header/Header';
+import CurrenciesPage from './components/Pages/Currencies/CurrenciesPage';
+import SingleCurrencyRate from './components/Pages/SingleCurrency/SingleCurrencyRate';
 
 const App = () => (
   <BrowserRouter>
     <Header />
     <Routes>
-      <Route path="/" element={<Navigate to="/pokemon" />} />
-      <Route path="/pokemon" element={<PokemonHomePage />} />
+      <Route path="/" element={<Navigate to="/currencies.json" />} />
+      <Route path="/currencies.json" element={<CurrenciesPage />} />
       <Route path="*" element={<Page404 />} />
-      <Route path="/pokemon/:nameId" element={<SinglePokemonPage />} />
+      <Route path="/currencies/:name.json" element={<SingleCurrencyRate />} />
     </Routes>
   </BrowserRouter>
 );

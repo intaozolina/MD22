@@ -1,14 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterSlice from './components/Counter/counterSlice';
-import toDoSlice from './components/ToDoList/toDoSlice';
-import pokemonApi from './components/Slices/pokemonSlice';
+
+import currencyAPi from './components/Slices/CurrencySlice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterSlice,
-    todos: toDoSlice,
-    [pokemonApi.reducerPath]: pokemonApi.reducer,
+    [currencyAPi.reducerPath]: currencyAPi.reducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(currencyAPi.middleware),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

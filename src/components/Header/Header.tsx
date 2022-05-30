@@ -5,7 +5,7 @@ import './header.scss';
 const Header = () => (
   <div className="header">
     <nav>
-      <NavLink className="header__navigation" to="/pokemon">Pokemon Page</NavLink>
+      <NavLink className="header__navigation" to="/currencies.json">Currencies</NavLink>
     </nav>
   </div>
 );

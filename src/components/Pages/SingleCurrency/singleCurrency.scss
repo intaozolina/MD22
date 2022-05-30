@@ -1,0 +1,22 @@
+.currency-heading {
+  font-size: 25px;
+  font-weight: 700px;
+  color: darkblue;
+  text-align: center;
+  padding: 50px;
+  text-transform: uppercase;
+}
+.currency-rate {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 200px);
+  padding: 20px;
+}
+.currency-key {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.currency-value {
+  color: midnightblue;
+  font-weight: 700;
+}

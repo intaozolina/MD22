@@ -1,0 +1,17 @@
+.currency-wrapper {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, 100px);
+}
+.button {
+  border: none;
+  background-color: cornsilk;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+  &:hover {
+    background-color: khaki;
+  }
+}
